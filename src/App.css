@@ -1,0 +1,265 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* NAVBAR */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  border-bottom: 1px solid #ccc;
+  background-color: aliceblue;
+}
+
+.menu-icon {
+  font-size: 2rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.menu-icon:hover {
+  background-color: blue;
+  cursor: pointer;
+}
+
+.main-part {
+  display: flex;
+}
+
+.likenotion {
+  text-align: center;
+  color: grey;
+}
+
+.lotion {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.lotion-header {
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+/* GLOBAL STYLES */
+
+body,
+.App {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  overflow: hidden;
+  font-size: 16px;
+  background: url(https://www.toptal.com/designers/subtlepatterns/patterns/lightpaperfibers.png);
+}
+
+button {
+  background: none;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+  cursor: pointer;
+  color: #08c;
+}
+button:hover {
+  color: #04c;
+}
+
+.App {
+  display: flex;
+}
+
+/* SIDEBAR STYLES */
+
+.app-sidebar {
+  width: 20vw;
+  height: 100vh;
+  border-right: 1px solid #ddd;
+  background-color: aliceblue;
+}
+
+.app-sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  border-bottom: 2px solid #ccc;
+  height: 2px;
+  align-items: center;
+}
+.app-sidebar-header h1 {
+  margin: 0;
+}
+
+.app-sidebar-notes {
+  height: calc(100vh - 78px);
+  overflow-y: scroll;
+}
+.app-sidebar-note {
+  padding: 25px;
+  cursor: pointer;
+}
+.sidebar-note-title {
+  display: flex;
+  justify-content: space-between;
+}
+.app-sidebar-note button {
+  color: crimson;
+}
+.app-sidebar-note p {
+  margin: 10px 0;
+}
+.app-sidebar-note small {
+  display: block;
+  color: #999;
+}
+
+.app-sidebar-note:hover {
+  background: #ddd;
+}
+.app-sidebar-note.active,
+.app-sidebar-note.active small {
+  background: rgb(100, 26, 100);
+  color: white;
+}
+
+/* NOTE EDITOR/PREVIEW (MAIN) STYLES */
+
+.app-main {
+  width: 100%;
+  height: 100vh;
+  background-color: aliceblue;
+}
+.app-main-note-edit,
+.app-main-note-preview {
+  height: 50vh;
+  background-color: aliceblue;
+}
+
+.no-active-note {
+  width: 80%;
+  height: 100vh;
+  line-height: 100vh;
+  text-align: center;
+  font-size: 2rem;
+  color: #999;
+  background-color: aliceblue;
+}
+
+/* Editing */
+
+.title-tit {
+  font-size: 1.5rem;
+}
+
+.textarea {
+  display: block;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 75vh;
+  resize: none;
+  font-size: inherit;
+  font-family: inherit;
+  background-color: aliceblue;
+}
+.app-main-note-edit input {
+  height: 50px;
+  font-size: 2rem;
+  width: 500px;
+}
+
+/* Preview */
+.app-main-note-preview {
+  border-top: 1px solid #ddd;
+  overflow-y: scroll;
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.preview-title {
+  padding: 25px 25px 0 25px;
+  margin: 0;
+}
+
+.markdown-preview {
+  padding: 0 25px 25px 25px;
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+/* Right */
+.right-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 15vh;
+}
+
+input {
+  border: none;
+  background-color: inherit;
+}
+
+.save-delete {
+  display: flex;
+  flex-direction: row;
+  gap: 7rem;
+  padding-right: 7vh;
+}
+
+.right-top-left {
+  display: flex;
+  flex-direction: column;
+  padding-left: 3rem;
+}
+
+.right-middle {
+  height: 7vh;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+}
+
+.plus {
+  font-size: 30px;
+  color: rgb(100, 26, 100);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plus:hover {
+  background-color: blue;
+  cursor: pointer;
+}
+.titlw {
+  font-weight: bold;
+}
+
+.textarea::placeholder {
+  width: 90%;
+  height: 100vh;
+  line-height: 70vh;
+  text-align: center;
+  font-size: 2em;
+}
+
+.datepicker {
+  font-size: 1.1rem;
+}
+
+#my-input {
+  font-size: 14px;
+  width: 12rem;
+}
